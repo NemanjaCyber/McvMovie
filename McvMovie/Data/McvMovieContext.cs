@@ -5,15 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
 
-namespace McvMovie.Data
-{
-    public class McvMovieContext : DbContext
-    {
-        public McvMovieContext (DbContextOptions<McvMovieContext> options)
-            : base(options)
-        {
-        }
+namespace McvMovie.Data;
 
-        public DbSet<MvcMovie.Models.Movie> Movie { get; set; } = default!;
+public class McvMovieContext : DbContext
+{
+    public McvMovieContext (DbContextOptions<McvMovieContext> options)
+        : base(options)
+    {
     }
+
+    public DbSet<MvcMovie.Models.Movie> Movie { get; set; } = default!;
 }
